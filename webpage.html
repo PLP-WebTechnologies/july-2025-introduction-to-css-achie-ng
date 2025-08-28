@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Multi-Section Webpage</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #4CAF50;
+      color: #fff;
+      padding: 1rem;
+    }
+
+    header h1 {
+      text-align: center;
+    }
+
+    /* Navigation (Flexbox) */
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background: #333;
+      padding: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Main Layout (Grid) */
+    main {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .content {
+      background: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    .sidebar {
+      background: #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #333;
+      color: white;
+      margin-top: 1rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      main {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        justify-content: space-around;
+      }
+      main {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        margin-top: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Responsive Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <section class="content">
+      <h2>Welcome</h2>
+      <p>This is a responsive webpage built using Flexbox and CSS Grid. Resize the browser window to see how the layout adjusts on mobile, tablet, and desktop views.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, purus eget varius fermentum, felis risus fermentum ex, vitae pulvinar purus dolor in purus.</p>
+    </section>
+
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Here you can place links, ads, or additional info.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Responsive Website</p>
+  </footer>
+</body>
+</html>
